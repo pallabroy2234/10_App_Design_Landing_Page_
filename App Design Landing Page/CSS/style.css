@@ -1,0 +1,714 @@
+/* 
+!========= :: INDEX OF CSSS :: =================!
+
+  !  :: 1.0 Web Fonts 
+  !  :: 2.0 Global Variables Define CSS
+  !  :: 3.0 Common css
+  !  :: 4.0 NAVBVAR css
+  !  :: 5.0 Scroll-Top Css
+  !  :: 6.0 HOME CSS
+  !  :: 7.0 Counter CSS
+  !  :: 8.0 Promo CSS
+  !  :: 9.0 Features CSS
+  !  :: 10.0 Screenshots CSS
+  !  :: 11.0 Pricing CSS
+  !  :: 12.0 Contact Us CSS
+  !  :: 13.0 Footer CSS
+
+  ! ============== :: ============================!
+    
+*/
+
+/* 
+    =================================================
+     ! :: 1.0 WEB fonts 
+    =================================================
+
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* 
+    =================================================
+     ! :: 2.0 Global Variables Define CSS
+    =================================================
+
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ! Backgroung Color  */
+  --bg-white: #fff;
+  --bg-black: #2c2c2c;
+  --bg-light-pink: #ff007a;
+  --bg-light-gray: #f6f9fe;
+  --bg-gradient: linear-gradient(to top, #ff007a 0%, #8e0074 100%);
+  --bg-card-shadow: 0 0.188rem 1.25rem 0px rgba(0, 0, 0, 0.06);
+  --bg-card-shadow-2: 0 2rem 5rem rgb(0, 0, 0, 0.06);
+  --bg-light-gray: #eee;
+
+  /* ! Text Color  */
+  --text-white: #fff;
+  --text-black: #2c2c2c;
+  --text-light-black: #444;
+  --text-light-pink: #ff007a;
+  --text-light-gray: #7e8085;
+
+  /* ! Font Family  */
+  --primary-font: "Poppins", sans-serif;
+}
+
+/* ! Custom Scroll bar */
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-light-pink);
+}
+/* 
+    =================================================
+     ! :: 3.0 Common css
+    =================================================
+
+ */
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  line-height: 1.75rem;
+  background-color: var(--bg-white);
+  overflow-x: hidden;
+}
+
+h1 {
+  color: var(--text-white);
+  font-size: 3.563rem;
+  line-height: 4.563rem;
+  letter-spacing: 0.125rem;
+  font-weight: 400;
+}
+
+h2 {
+  color: var(--bg-black);
+  font-size: 2.875rem;
+  line-height: 3.75rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.563rem;
+  font-weight: 400;
+  color: var(--text-black);
+  line-height: 2.375rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.063rem;
+  line-height: 1.688rem;
+  color: var(--text-light-pink);
+  text-transform: uppercase;
+}
+
+section,
+.section {
+  position: relative;
+}
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--text-light-black);
+  -webkit-transform: all 0.3s ease 0s;
+  transform: all 0.3s ease 0s;
+}
+
+a:hover {
+  color: var(--text-light-pink);
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  outline: unset;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol li,
+ul li {
+  list-style: none;
+}
+
+button,
+button:focus {
+  outline: unset;
+  box-shadow: none;
+  border: unset;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.btn {
+  font-size: 0.938rem;
+  font-weight: 500;
+  color: var(--text-white);
+  line-height: 1;
+  text-align: center;
+  padding: 1.125rem 1.875rem;
+  border: 0;
+  position: relative;
+  z-index: 1;
+}
+.btn,
+.btn:active,
+.btn.sApp-btn:before,
+.bg-overlay::after {
+  background: var(--bg-gradient);
+}
+.btn:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  color: var(--text-white);
+}
+/* ! SECTION PADDING */
+.ptb_100 {
+  padding: 100px 0;
+}
+
+/* 
+    =================================================
+     ! :: 4.0 NAVBVAR css
+    =================================================
+
+ */
+
+.navigation-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navigation-wrapper .nav-item .nav-link {
+  padding: 1.875rem 1.25rem;
+  color: var(--text-white);
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.navigation-wrapper .navbar-brand img {
+  max-width: 50%;
+}
+.navigation-wrapper .navbrand-pink {
+  display: none;
+}
+
+/* 
+    =================================================
+     ! :: 5.0 Scroll-Top Fixed Css
+    =================================================
+
+ */
+.navigation-wrapper.scroll-on {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  right: 0;
+  background-color: var(--bg-white);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+}
+.navigation-wrapper.scroll-on .nav-item .nav-link:hover,
+.navigation-wrapper.scroll-on .nav-item .nav-link.active {
+  color: var(--text-light-pink) !important;
+}
+
+.navigation-wrapper.scroll-on .nav-item .nav-link {
+  color: var(--text-light-gray);
+}
+
+.navigation-wrapper.scroll-on .navbrand-pink {
+  display: inline;
+}
+
+.navigation-wrapper.scroll-on .navbrand-white {
+  display: none;
+}
+
+/* 
+    =================================================
+     ! :: 6.0 HOME CSS
+    =================================================
+
+ */
+
+#home {
+  background: url("../images/bg.png") no-repeat center;
+  background-size: cover;
+  min-height: 1000px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#home .home-text h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 4.938rem;
+  color: var(--text-white);
+  padding: 1.063rem 0;
+}
+#home .home-text p {
+  font-size: 1rem;
+  color: var(--text-white);
+  padding: 1.063rem 0;
+}
+
+#home .home-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+#home .home-download-btn .btn {
+  padding: 1.5rem 3rem;
+  margin-left: 1.5rem;
+  color: var(--text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+
+/* #home .home-download-btn .btn:first-child {
+  margin-left: 0;
+} */
+#home .home-download-btn .btn:hover {
+  -webkit-transform: translateY(-0.313rem);
+  -moz-transform: translateY(-0.313rem);
+  -o-transform: translateY(-0.313rem);
+  -ms-transform: translateY(-0.313rem);
+  transform: translateY(-0.313rem);
+}
+
+#home .home-download-btn .btn span {
+  font-size: 1.4rem;
+  margin-right: 0.625rem;
+}
+
+#home .home_img {
+  text-align: right;
+  transform: rotate(15deg);
+}
+
+#home .home_img img {
+  animation: float 3s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+
+/* 
+    =================================================
+     ! :: 7.0 Counter CSS
+    =================================================
+
+ */
+.counter_area {
+  padding: 6.875rem 0 1.875rem;
+}
+
+.single_counter {
+  position: relative;
+}
+
+.single_counter span {
+  font-size: 2.6rem;
+  background: var(--bg-gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.single_counter::after {
+  position: absolute;
+  content: "";
+  width: 0.063rem;
+  height: 70%;
+  background-color: var(--bg-black);
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  opacity: 0.25;
+}
+
+.single_counter:last-child::after {
+  display: none;
+}
+/* 
+    =================================================
+     ! :: 8.0 Promo CSS
+    =================================================
+
+ */
+.promo_section {
+  padding: 6.25rem 0 4rem;
+}
+
+.section_heading {
+  margin-bottom: 2.813rem;
+}
+
+.section_heading h2 {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+.section_heading h2::after {
+  position: absolute;
+  content: "";
+  width: 4.56rem;
+  height: 0.125rem;
+  background: var(--bg-light-pink);
+  bottom: 1.125rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section_heading h2 span {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.single_promo_hover {
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  will-change: transform;
+}
+
+.single_promo_1 {
+  box-shadow: 0 3px 20px 0px rgb(0 0 0/12%);
+  border-radius: 1.5rem;
+  padding: 1.875rem 2.5rem 2.5rem;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.single_promo_1::before {
+  position: absolute;
+  content: "";
+  width: 0.0625rem;
+  height: 0.125rem;
+  top: 0rem;
+  left: 0rem;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.single_promo_1:hover::before {
+  width: 100%;
+  background-color: var(--bg-light-pink);
+}
+.single_promo_hover:hover {
+  box-shadow: 0 2rem 5rem rgb(0 0 0/12%);
+}
+
+.single_promo_1 span {
+  font-size: 30px;
+  background: url("../images/promo-icon-bg.png") no-repeat center;
+  display: block;
+  padding: 54px 0 57px 0;
+}
+
+.single_promo_1 h5 {
+  padding-bottom: 0.438rem;
+}
+
+.single_promo_1 p {
+  font-size: 0.983rem;
+  padding-top: 0.625rem;
+}
+
+/* 
+    =================================================
+     ! :: 9.0 Features CSS
+    =================================================
+
+ */
+.features-section {
+  background: url("../images/feature-bg.png") no-repeat center;
+  background-size: cover;
+  padding-bottom: 20rem;
+}
+.features-section .features-title {
+  padding-top: 8rem;
+}
+
+.features-section .features-title h2 {
+  margin-bottom: 1.5rem;
+}
+
+.features-section .features-title h2,
+.features-section .features-title p {
+  color: var(--text-white);
+}
+
+.features-section .features-img {
+  text-align: right;
+  padding-top: 8rem;
+}
+
+.features-section .features-img img {
+  max-width: 60%;
+}
+
+.f-card .margin-top-up {
+  margin-top: -25rem;
+}
+
+.f-card .features-card {
+  background-color: var(--bg-white);
+  padding: 2.2rem 2.2rem 2rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2rem 5rem rgb(0 0 0/12%);
+  transition: all 0.4s ease;
+}
+
+.f-card .features-card:hover {
+  background: var(--bg-gradient);
+  transition: all 0.4s ease;
+}
+.f-card .features-card:hover h5,
+.f-card .features-card:hover p {
+  color: var(--text-white);
+  transition: all 0.4s ease;
+}
+
+/* 
+    =================================================
+     ! :: 10.0 Screenshots CSS
+    =================================================
+
+ */
+
+.app-screen {
+  padding-bottom: 5.313rem;
+  overflow: hidden;
+}
+
+.app-screen .swiper-slide {
+  width: 263px !important;
+  height: auto;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 0.5rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--bg-light-pink);
+}
+
+/* 
+    =================================================
+     ! :: 11.0 Pricing CSS
+    =================================================
+
+ */
+#pricing {
+  padding-bottom: 100px;
+}
+
+.single_price {
+  -webkit-box-shadow: 0 0.313rem 0.875rem rgb(45 49 54/95%);
+  box-shadow: 0 0.313rem 0.875rem rgb(45 49 54/95%);
+  padding: 2.5rem 0;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.single_price .month {
+  position: absolute;
+  top: 1.625rem;
+  right: -0.563rem;
+  background: var(--bg-gradient);
+  color: var(--text-white);
+  transform: rotate(-90deg);
+  padding: 0.625rem;
+  width: 6.25rem;
+}
+
+.single_price .month::before {
+  content: "";
+  background: var(--bg-light-pink);
+  position: absolute;
+  top: 0.563rem;
+  padding: 0.938rem;
+  left: -0.938rem;
+  transform: rotate(45deg);
+}
+
+.single_price .icon_pad {
+  width: 5rem;
+  height: 4.875rem;
+  margin: 2.5rem auto 3.125rem;
+  border-radius: 100%;
+  border-right: dashed 0.313rem var(--bg-light-pink);
+  border-bottom: solid 0.313rem var(--bg-light-pink);
+  padding-left: 0.563rem;
+  padding-top: 0.438rem;
+}
+
+.single_price .icon_circle {
+  background: var(--bg-light-pink);
+  color: var(--text-white);
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 100%;
+  font-size: 1.625rem;
+  padding: 1.125rem;
+  margin: 0 0 0 -0.063rem;
+}
+
+.single_price .doller h2 {
+  font-weight: 700;
+  font-size: 2.813rem;
+}
+
+.single_price .doller span {
+  font-weight: 600;
+  vertical-align: super;
+  padding-right: 0.125rem;
+  font-size: 1.875rem;
+}
+
+.single_price li {
+  padding: 0.313rem 0;
+}
+.single_price:hover {
+  margin-top: -0.625rem;
+  cursor: pointer;
+}
+
+.active_price {
+  background: var(--bg-gradient);
+  color: var(--text-white);
+}
+
+.active_price h5,
+.active_price .doller h2,
+.active_price .doller .doller_sine {
+  color: var(--text-white);
+}
+
+/* 
+    =================================================
+     ! :: 12.0 Contact Us CSS
+    =================================================
+
+ */
+
+.contact {
+  background: var(--bg-light-gray);
+}
+.contact .info p a {
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0.75rem 0;
+}
+
+.contact .form-control {
+  height: 3.75rem;
+  padding: 0.75rem 1.875rem;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 0.1875rem 1.125rem 0 rgb(0 0 0/12%);
+  margin-bottom: 1.3rem;
+}
+
+.contact .text-area {
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.875rem;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 0.1875rem 1.125rem 0 rgb(0 0 0/12%);
+  margin-bottom: 0.875rem;
+}
+
+.contact .text-area:focus {
+  outline: none;
+  border: none;
+}
+
+/* 
+    =================================================
+     ! :: 13.0 Footer CSS
+    =================================================
+
+ */
+
+.footer-section {
+  background: var(--bg-gradient);
+  color: var(--text-white);
+}
+
+.footer-section p {
+  opacity: 0.5;
+}

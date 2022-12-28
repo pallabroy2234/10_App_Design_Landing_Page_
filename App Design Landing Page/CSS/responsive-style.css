@@ -1,0 +1,222 @@
+@media (max-width: 1199px) {
+  /* 
+    =================================================
+     ! :: 9.0 Features CSS
+    =================================================
+
+ */
+  .f-card .margin-top-up {
+    margin-top: -25rem;
+  }
+  .features-section .features-img img {
+    min-width: 70%;
+  }
+}
+
+@media (max-width: 1030px) {
+  /* 
+    =================================================
+     ! :: 3.0 Common css
+    =================================================
+
+ */
+  /* 
+    =================================================
+     ! :: 9.0 Features CSS
+    =================================================
+
+ */
+  .f-card .margin-top-up {
+    margin-top: -20rem;
+  }
+}
+
+@media (max-width: 991px) {
+  /* 
+    =================================================
+     ! :: 3.0 Common css
+    =================================================
+
+ */
+  h1,
+  h2 {
+    font-size: 2.5rem;
+  }
+  .ipad_px_30 {
+    padding: 0 1.875rem;
+  }
+
+  /* 
+    =================================================
+     ! :: 4.0 NAVBVAR css
+    =================================================
+
+ */
+  .navigation-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+    background-color: var(--bg-white);
+    padding: 1.1rem 0;
+  }
+
+  .navigation-wrapper .navbar-brand {
+    width: 50%;
+  }
+  .navigation-wrapper .navbar-brand img {
+    max-width: 60%;
+  }
+  .navigation-wrapper .navbar-toggler {
+    margin-right: 0;
+  }
+  .navigation-wrapper .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+    border: unset;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    color: var(--bg-black);
+    width: 1em;
+    height: 1em;
+  }
+
+  .navigation-wrapper .navbar-nav {
+    background-color: var(--bg-white);
+  }
+  .navigation-wrapper .nav-item .nav-link {
+    color: var(--text-black);
+    text-align: left;
+    padding-left: 0;
+    padding: 1rem 0;
+  }
+  .navigation-wrapper .navbar-brand .navbrand-white {
+    display: none;
+  }
+  .navigation-wrapper .navbar-brand .navbrand-pink {
+    display: inline;
+  }
+
+  /* 
+    =================================================
+     ! :: 6.0 HOME CSS
+    =================================================
+
+ */
+  #home {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+  #home .home-text {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  #home .home-download-btn {
+    justify-content: center;
+  }
+  #home .home_img {
+    text-align: center;
+  }
+  #home .home_img img {
+    max-width: 60%;
+  }
+  /* 
+    =================================================
+     ! :: 9.0 Features CSS
+    =================================================
+
+ */
+  .features-section .features-img img {
+    max-width: 95%;
+  }
+  .features-section .features-img,
+  .features-section .features-title {
+    padding-top: 4rem;
+  }
+  .f-card .margin-top-up {
+    margin-top: -15rem;
+  }
+  /* 
+    =================================================
+     ! :: 11.0 Pricing CSS
+    =================================================
+  
+ */
+  .single_price {
+    margin-bottom: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  /* 
+    =================================================
+     ! :: 6.0 HOME CSS
+    =================================================
+
+ */
+  #home .home-text h2 {
+    font-size: 2.438rem;
+    line-height: 3.6rem;
+  }
+  #home .home_img {
+    transform: rotate(0deg);
+  }
+  /* 
+    =================================================
+     ! :: 7.0 Counter CSS
+    =================================================
+
+ */
+  .single_counter:nth-child(2)::after {
+    display: none;
+  }
+  /* 
+    =================================================
+     ! :: 9.0 Features CSS
+    =================================================
+
+ */
+  .features-section {
+    padding-bottom: 0rem;
+  }
+  .features-section .features-img,
+  .features-section .features-title {
+    padding-top: 3rem;
+    text-align: center;
+  }
+  .f-card .margin-top-up {
+    margin-top: 3rem;
+  }
+  .f-card .features-card {
+    padding: 2.5rem 2rem 2.5rem 2rem;
+    text-align: center;
+  }
+  .features-section .features-title h2 {
+    font-size: 2rem;
+  }
+  .features-card {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  /* 
+    =================================================
+     ! :: 6.0 HOME CSS
+    =================================================
+  
+ */
+  #home .home-text h2,
+  #home .home-text span {
+    font-size: 2.2rem;
+  }
+  /* 
+    =================================================
+     ! :: 9.0 Features CSS
+    =================================================
+
+ */
+  .features-section .features-title h2 {
+    font-size: 1.5rem;
+  }
+}
